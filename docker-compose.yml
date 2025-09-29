@@ -1,9 +1,11 @@
 version: '3'
 
 services:
-  tiktokweb:
+  tiktokbot:
     build: .
-    container_name: tiktok_flask_ready
+    container_name: tiktok_flask_full
     ports:
       - "5000:5000"
+    volumes:
+      - ./downloads:/app/downloads
     restart: unless-stopped

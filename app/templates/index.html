@@ -1,23 +1,21 @@
 <!doctype html>
 <html>
 <head>
-  <title>TikTok Bot Web (ZimaOS)</title>
+  <title>TikTok Video Downloader</title>
 </head>
 <body>
-  <h1>TikTok Downloader (Modalità Demo)</h1>
+  <h1>Downloader TikTok (con API esterna)</h1>
   <form method="POST">
-    <label>Hashtag:</label><br>
-    <input type="text" name="hashtag"><br><br>
-    <label>ID Musica:</label><br>
-    <input type="text" name="music_id"><br><br>
-    <input type="submit" value="Scarica video">
+    <label>Incolla uno o più link TikTok (uno per riga):</label><br>
+    <textarea name="urls" rows="10" cols="60"></textarea><br><br>
+    <input type="submit" value="Scarica">
   </form>
 
   {% if result %}
-    <h2>Risultato:</h2>
+    <h2>Risultati:</h2>
     <ul>
-      {% for video in result %}
-        <li>{{ video }}</li>
+      {% for r in result %}
+        <li>{{ r }}</li>
       {% endfor %}
     </ul>
   {% endif %}
