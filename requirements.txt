@@ -1,2 +1,4 @@
 flask
 requests
+TikTokApi==6.0.5
+playwright

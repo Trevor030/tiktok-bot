@@ -3,7 +3,7 @@ version: '3'
 services:
   tiktokbot:
     build: .
-    container_name: tiktok_flask_full
+    container_name: tiktok_autobot
     ports:
       - "5050:5000"
     volumes:

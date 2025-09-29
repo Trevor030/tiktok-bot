@@ -1,14 +1,16 @@
 <!doctype html>
 <html>
 <head>
-  <title>TikTok Video Downloader</title>
+  <title>TikTok AutoBot</title>
 </head>
 <body>
-  <h1>Downloader TikTok (con API esterna)</h1>
+  <h1>Scarica video TikTok per Hashtag + Musica</h1>
   <form method="POST">
-    <label>Incolla uno o più link TikTok (uno per riga):</label><br>
-    <textarea name="urls" rows="10" cols="60"></textarea><br><br>
-    <input type="submit" value="Scarica">
+    <label>Hashtag (senza #):</label><br>
+    <input type="text" name="hashtag" required><br><br>
+    <label>ID musica TikTok:</label><br>
+    <input type="text" name="music_id" required><br><br>
+    <input type="submit" value="Cerca e Scarica">
   </form>
 
   {% if result %}

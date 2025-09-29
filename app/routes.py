@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
-from app.tiktok_downloader import download_tiktok_video
-import os
+from app.tiktok_bot import run_bot
 
 app = Flask(__name__)
 
@@ -8,8 +7,7 @@ app = Flask(__name__)
 def index():
     result = []
     if request.method == "POST":
-        urls = request.form["urls"].splitlines()
-        for url in urls:
-            res = download_tiktok_video(url.strip())
-            result.append(res)
+        hashtag = request.form["hashtag"]
+        music_id = request.form["music_id"]
+        result = run_bot(hashtag, music_id)
     return render_template("index.html", result=result)
