@@ -1,3 +1,2 @@
 TikTokApi==6.0.5
 requests
-playwright
