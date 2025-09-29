@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>TikTok Bot Web</title>
+</head>
+<body>
+  <h1>TikTok Downloader</h1>
+  <form method="POST">
+    <label>Hashtag:</label><br>
+    <input type="text" name="hashtag"><br><br>
+    <label>ID Musica:</label><br>
+    <input type="text" name="music_id"><br><br>
+    <input type="submit" value="Scarica video">
+  </form>
+
+  {% if result %}
+    <h2>Video scaricati:</h2>
+    <ul>
+      {% for video in result %}
+        <li>{{ video }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</body>
+</html>
