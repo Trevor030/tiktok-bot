@@ -1,4 +1,0 @@
-TikTokApi==6.0.5
-requests
-flask
-playwright
